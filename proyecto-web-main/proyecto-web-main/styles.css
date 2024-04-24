@@ -190,7 +190,6 @@ body {
 
 .product__image {
   max-width: 100%;
-  /*   border-radius: var(--spacing-1); */
 }
 
 .product__title {
@@ -207,13 +206,13 @@ body {
 }
 
 /* Estilos para la sección de características */
+
 .features {
   background-color: var(--color-background);
-  color: var(--color-text);
-  padding: var(--spacing-4) 0;
+    padding: var(--spacing-4) 0;
 }
 
-.features__title {
+.features__title-big {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -221,29 +220,60 @@ body {
 
   font-size: var(--font-size-4);
   margin-bottom: var(--spacing-4);
-  text-align: right;
+  margin-right: var(--spacing-4);
+  text-align: left;
+
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.features__title-small {
+  font-family: "Alegreya Sans", sans-serif;
+  color: var(--color-secondary);
+ 
 }
 
 .features-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(5, 20%);
 }
 
 .feature {
   background-color: var(--color-background);
-  /*   border-radius: var(--spacing-1); */
-  /*  padding: var(--spacing-3); */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin: var(--spacing-2);
-  max-width: 300px;
+  max-width: 100%;
   text-align: center;
+  grid-column: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+       /* Estilos para asegurar que los bordes no colisionen y alternar las imagénes */
+
+.features-container .feature:nth-child(2) .feature__content {
+  border-top: 1px solid var(--color-primary);
+}
+
+.features-container .feature:last-child .feature__content {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.features-container .feature:nth-child(even) {
+  flex-direction: row-reverse;
+  border-left: 1px solid var(--color-primary);
+}
+
+.features-container .feature:nth-child(odd) {
+  border-right: 1px solid var(--color-primary);
 }
 
 .feature__image {
-  max-width: 100%;
-  /*  border-radius: var(--spacing-1); */
-  margin-bottom: var(--spacing-2);
+  max-width: 50%;
+  height: 100%;
+    margin-bottom: var(--spacing-2);
+  border: 1px solid var(--color-primary);
+  box-sizing: border-box;
 }
 
 .feature__title {
