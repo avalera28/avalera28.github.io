@@ -381,7 +381,11 @@ text-transform: uppercase;
 
 /* Estilos para la sección de testimonios */
 .testimonials {
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
+  height: 60vh;
+  background-position: top;
+  background-image: url("img/smoke.png");
+  background-size: cover;
   color: var(--color-text);
   padding: var(--spacing-4) 0;
 }
@@ -412,10 +416,8 @@ text-transform: uppercase;
 }
 
 .testimonial {
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #f2f2f278;
   padding: var(--spacing-3);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-right: var(--spacing-3);
   flex: 0 0 auto;
