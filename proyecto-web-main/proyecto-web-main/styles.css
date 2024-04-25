@@ -28,9 +28,6 @@
 }
 
 
-
-
-
 /* Reset básico para quitar márgenes y paddings predeterminados */
 body,
 h1,
@@ -63,9 +60,9 @@ body {
 /* Estilos para el header y navegación */
 .header {
   background-image: url("https://source.unsplash.com/1600x900/?technology");
-    color: var(--color-text);
-   text-align: left;
- }
+  color: var(--color-text);
+  text-align: left;
+}
 
 .nav {
   display: none;
@@ -91,7 +88,7 @@ body {
 
 .nav__link:hover {
   color: var(--color-accent);
-    font-weight: 500;
+  font-weight: 500;
 }
 
 
@@ -103,27 +100,27 @@ body {
   position: fixed;
   width: 100%;
   z-index: 100;
- }
+}
 
 
-.nav-mobile svg{
-  height: 2.5em;  
+.nav-mobile svg {
+  height: 2.5em;
   position: absolute;
-  right:var(--spacing-1);
+  right: var(--spacing-1);
   transform: translateX(-100%);
 }
 
 /* Estilos para la sección hero */
 .hero {
-   background-size: cover;
+  background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color:var(--color-text-white);
-  
+  color: var(--color-text-white);
+
 }
 
 .hero__content {
@@ -137,25 +134,23 @@ body {
   font-style: normal;
   text-align: center;
   margin-top: var(--font-size-4);
-
-/*   font-size: var(--font-size-5); */
-font-size: var(--font-size-4);
+  /* 💡Siguiente versión,usar clamp para optimizar fuentes */
+  font-size: var(--font-size-4);
   margin-bottom: var(--spacing-3);
   line-height: 1;
 
-  span{color: var(--color-accent);}
+  span {
+    color: var(--color-accent);
+  }
 }
 
-
+/* 💡Siguiente versión, agregar alguna animación tipografica */
 
 .hero__subtitle {
-/*   font-size: var(--font-size-3);
- */  
- font-size: var(--font-size-2);
- margin-bottom: var(--spacing-4);
- text-align: center;
-/*   text-align: right;
- */}
+  font-size: var(--font-size-2);
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
 
 /* Estilos para las secciones */
 .container {
@@ -165,7 +160,7 @@ font-size: var(--font-size-4);
 }
 
 .products {
-   color: var(--color-text);
+  color: var(--color-text);
   padding: var(--spacing-4) 0;
 }
 
@@ -174,14 +169,10 @@ font-size: var(--font-size-4);
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
-
-/*   font-size: var(--font-size-4);
- */  
- font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
- margin-bottom: var(--spacing-4);
- text-align: center;
-/*   text-align: left;
- */}
+  font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
 
 .products-grid {
   display: grid;
@@ -193,7 +184,7 @@ font-size: var(--font-size-4);
 
 .product {
   background-color: var(--color-background);
-    padding: var(--spacing-3);
+  padding: var(--spacing-3);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid var(--color-primary);
   border-right: 1px solid var(--color-primary);
@@ -219,9 +210,8 @@ font-size: var(--font-size-4);
   font-style: normal;
   font-size: var(--font-size-2);
   text-align: center;
-/*   font-size: var(--font-size-3);
-text aling lef
- */  margin-bottom: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
+  /* 💡Siguiente versión,usar clamp para optimizar fuentes */
 }
 
 .product__description {
@@ -234,7 +224,7 @@ text aling lef
 
 .features {
   background-color: var(--color-background);
-    padding: var(--spacing-4) 0;
+  padding: var(--spacing-4) 0;
 }
 
 .features__title-big {
@@ -243,35 +233,26 @@ text aling lef
   font-style: normal;
   text-transform: uppercase;
   text-wrap: pretty;
-
-/*   font-size: var(--font-size-4);
- */  
- font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
- margin-bottom: var(--spacing-4);
-  /* margin-right: var(--spacing-4); */
-/*   text-align: left;
- */
- text-align: center;
+  font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
+  margin-bottom: var(--spacing-4);
+  text-align: center;
   grid-column: 1;
   grid-row: 1;
 }
 
 .features__title-small {
   display: none;
-  /* font-family: "Alegreya Sans", sans-serif;
-  color: var(--color-secondary); */
- 
+  /* ❓Los estilos de la fuente, ¿aquí o en la media query? */
+
 }
 
 .features-container {
   display: grid;
-/*   grid-template-columns: 1fr 2fr; */ 
-grid-template-columns: 1fr; 
-/* grid-template-rows: repeat(5, 20%); */
-grid-template-rows: repeat(7);
-/*Solo mobile*/
-gap: var(--spacing-3);
-/*Solo mobile*/
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7);
+  /*Solo mobile*/
+  gap: var(--spacing-3);
+  /*Solo mobile*/
 }
 
 .feature {
@@ -279,43 +260,22 @@ gap: var(--spacing-3);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   text-align: center;
-/*   grid-column: 2; */  
-grid-column: 1;
-display: flex;
-/*   flex-direction: row; */
-flex-direction: column;
 
-/*solo mobile*/
-border: 1px solid var(--color-primary);
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+
+  /*solo mobile*/
+  border: 1px solid var(--color-primary);
   /*Solo mobile*/
 }
 
-       /* Estilos para asegurar que los bordes no colisionen y alternar las imagénes */
-
-/* .features-container .feature:nth-child(2) .feature__content {
-  border-top: 1px solid var(--color-primary);
-}*/
-
-/*features-container .feature:last-child .feature__content {
-  border-bottom: 1px solid var(--color-primary);
-}*/
-
-/*.features-container .feature:nth-child(even) {
-   flex-direction: row-reverse;
-  border-left: 1px solid var(--color-primary);
-}*/
-
-/* .features-container .feature:nth-child(odd) {
-  border-right: 1px solid var(--color-primary);
-} */
 
 .feature__image {
-/*   max-width: 50%;
- */  
- max-width: 100%;
- height: 100%;
-    margin-bottom: var(--spacing-2);
-  /* border: 1px solid var(--color-primary); */
+   max-width: 100%;
+  height: 100%;
+  margin-bottom: var(--spacing-2);
+ 
   /*Solo mobile*/
   border-bottom: 1px solid var(--color-primary);
   /*Solo mobile*/
@@ -327,9 +287,9 @@ border: 1px solid var(--color-primary);
   font-weight: 500;
   font-style: normal;
   text-align: center;
-font-size: var(--font-size-2);
-/*   font-size: var(--font-size-3);
- */  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-2);
+
+  margin-bottom: var(--spacing-1);
   padding: var(--spacing-3);
 }
 
@@ -351,28 +311,26 @@ font-size: var(--font-size-2);
   font-weight: 500;
   font-style: normal;
   text-align: center;
-/*   text-align: left;
- */  text-transform: uppercase;
- font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
-/*   font-size: var(--font-size-4);
- */  margin-bottom: var(--spacing-4);
-  }
+   /* 💡Siguiente versión, considerar crear clases para titulos y asi evitar reescribir los estilos tipograficos en cada sección*/
+  text-transform: uppercase;
+  font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
+
+  margin-bottom: var(--spacing-4);
+}
 
 .price-cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  }
+
+}
 
 .price-card {
-/*  display: grid;
- grid-template-columns: 4fr 1fr;
- */  background-color:var(--color-secondary);
+  background-color: var(--color-secondary);
   padding: var(--spacing-4);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  
+
   max-width: 1200px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -382,16 +340,15 @@ font-size: var(--font-size-2);
 .price-card:hover {
   transform: scale(110%);
   opacity: 100%;
- }
+}
 
 .price-card__title {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-style: normal;
   text-align: center;
-/*   text-align: left;
- */  color: var(--color-text-white);
-text-transform: uppercase;
+  color: var(--color-text-white);
+  text-transform: uppercase;
   font-size: var(--font-size-3);
   margin-left: var(--spacing-3);
 }
@@ -402,8 +359,7 @@ text-transform: uppercase;
   color: var(--color-text-white);
   margin: var(--spacing-3);
   text-align: center;
-/*   text-align: left;
- */}
+}
 
 .price {
   font-size: var(--font-size-2);
@@ -421,7 +377,7 @@ text-transform: uppercase;
   border-radius: var(--spacing-1);
   text-decoration: none;
   transition: background-color 0.3s;
-  max-height:calc(var(--font-size-2)*3);
+  max-height: calc(var(--font-size-2)*3);
 }
 
 .cta-button:hover {
@@ -430,9 +386,9 @@ text-transform: uppercase;
 
 /* Estilos para la sección de testimonios */
 .testimonials {
-    height: 60vh;
+  height: 60vh;
   background-position: top;
-  background-image: url("img/smoke.png");
+  background-image: url("img/smoke.png");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
   background-size: cover;
   color: var(--color-text);
   padding: var(--spacing-4) 0;
@@ -444,11 +400,9 @@ text-transform: uppercase;
   font-style: normal;
   text-transform: uppercase;
   font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
-/*   font-size: var(--font-size-4);
- */  margin-bottom: var(--spacing-4);
- text-align: center;
-/*   text-align: right;
- */}
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
 
 .testimonials-carousel {
   overflow: hidden;
@@ -497,13 +451,6 @@ text-transform: uppercase;
 
 /* Estilos para la sección de contacto */
 
-/* #contactSection .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-
-} */
-
 .contact {
   background-color: var(--color-primary);
   color: var(--color-text-white);
@@ -517,18 +464,15 @@ text-transform: uppercase;
   font-style: normal;
   text-transform: uppercase;
   font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
-/*   font-size: var(--font-size-4);
- */  margin-bottom: var(--spacing-4);
- text-align: center;
-/*   text-align: left
- */}
+  margin-bottom: var(--spacing-4);
+  text-align: center;
+}
 
 .contact__description {
   font-size: var(--font-size-2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-4);
   text-align: center;
-/*   text-align: left; */
 }
 
 .contact-form {
@@ -558,7 +502,7 @@ text-transform: uppercase;
 
 button[type=submit] {
   background-color: var(--color-secondary);
-  color:var(--color-text-white);
+  color: var(--color-text-white);
   border: none;
   padding: var(--spacing-2) var(--spacing-4);
   font-size: var(--font-size-2);
@@ -579,15 +523,11 @@ button[type=submit]:hover {
   text-wrap: pretty;
   padding-bottom: var(--spacing-2);
   padding-top: var(--spacing-2);
-/*   text-align: left;
- */
- 
-/*   padding: var(--spacing-3);
- */  width: 100%;
+  width: 100%;
 }
 
 .footer__link {
-  color:var(--color-text-white);
+  color: var(--color-text-white);
   text-decoration: none;
   margin: 0 10px;
 }
@@ -621,125 +561,136 @@ button[type=submit]:hover {
   .feature {
     grid-template-columns: 1fr;
   }
- 
+
 }
 
 @media (min-width: 1024px) {
   /* Estilos para dispositivos de escritorio */
 
   .nav-mobile {
-  display: none;
-   }
+    display: none;
+  }
 
-   .nav{display: block;}
+  .nav {
+    display: block;
+  }
 
-   .features__title-small {
+  .features__title-small {
     display: block;
     font-family: "Alegreya Sans", sans-serif;
-    color: var(--color-secondary); 
-     }
+    color: var(--color-secondary);
+  }
 
-     .features-container {
-      grid-template-columns: 1fr 2fr; 
-    grid-template-rows: repeat(5, 20%); 
-        gap: 0;
-  
-    }
+  .features-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(5, 20%);
+    gap: 0;
 
-    .feature {
-    grid-column: 2;  
-    flex-direction: row; 
+  }
+
+  .feature {
+    grid-column: 2;
+    flex-direction: row;
     border: none;
-    
-    }
 
-    .products__title {
+  }
+
+  .products__title {
     text-align: left;
-     }
-    
-    .products-grid {
-      
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     
-    
-    }
-
-    .features__title-big {
-      margin-right: var(--spacing-4); text-align: left;
-         }
-
-    /* Estilos para asegurar que los bordes no colisionen y alternar las imagénes */
-
-.features-container .feature:nth-child(2) .feature__content {
-  border-top: 1px solid var(--color-primary);
-}
-
-.features-container .feature:last-child .feature__content {
-  border-bottom: 1px solid var(--color-primary);
-}
-
-.features-container .feature:nth-child(even) {
-   flex-direction: row-reverse;
-  border-left: 1px solid var(--color-primary);
-}
-
-.features-container .feature:nth-child(odd) {
-  border-right: 1px solid var(--color-primary);
-}
-
-.feature__image {
-  max-width: 50%;
-  
-  border: 1px solid var(--color-primary);
-   
   }
 
-  
-.feature__title { font-size: var(--font-size-3);
- }
+  .products-grid {
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 
+  }
 
-.pricing__title { text-align: left;
- 
+  .features__title-big {
+    margin-right: var(--spacing-4);
+    text-align: left;
+  }
+
+  /* Estilos para asegurar que los bordes no colisionen y alternar las imagénes */
+
+  .features-container .feature:nth-child(2) .feature__content {
+    border-top: 1px solid var(--color-primary);
+  }
+
+  .features-container .feature:last-child .feature__content {
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  .features-container .feature:nth-child(even) {
+    flex-direction: row-reverse;
+    border-left: 1px solid var(--color-primary);
+  }
+
+  .features-container .feature:nth-child(odd) {
+    border-right: 1px solid var(--color-primary);
+  }
+
+  .feature__image {
+    max-width: 50%;
+
+    border: 1px solid var(--color-primary);
+
+  }
+
+
+  .feature__title {
+    font-size: var(--font-size-3);
   }
 
 
 
-.price-card {  display: grid;
- grid-template-columns: 4fr 1fr;
- 
-}
+  .pricing__title {
+    text-align: left;
+
+  }
 
 
 
-.price-card__title { text-align: left;
- 
-}
+  .price-card {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 
-.price-card__description {  text-align: left;
- }
- #contactSection .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-
-} 
+  }
 
 
-.contact__title { text-align: left
- }
 
-.contact__description { text-align: left;
-}
+  .price-card__title {
+    text-align: left;
+
+  }
+
+  .price-card__description {
+    text-align: left;
+  }
+
+  #contactSection .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+  }
 
 
-.footer {
+  .contact__title {
+    text-align: left
+  }
 
-  text-align: left;
-   padding: var(--spacing-3);
- 
-}
+  .contact__description {
+    text-align: left;
+  }
+
+
+  .footer {
+
+    text-align: left;
+    padding: var(--spacing-3);
+
+  }
 
 
 
