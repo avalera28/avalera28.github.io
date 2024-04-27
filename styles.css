@@ -388,7 +388,7 @@ body {
 .testimonials {
   height: 60vh;
   background-position: top;
-  background-image: url("img/smoke.png");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
+  background-image: url("img/smoke.webp");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
   background-size: cover;
   color: var(--color-text);
   padding: var(--spacing-4) 0;
