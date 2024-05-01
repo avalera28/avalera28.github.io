@@ -575,9 +575,27 @@ button[type=submit]:hover {
     font-size: var(--font-size-3);
   }
 
-  .product,
-  .feature {
+  .features__title-small {
+    display: block;
+    font-family: "Alegreya Sans", sans-serif;
+    color: var(--color-secondary);
+  }
+
+  .features__title-big {
+    margin-right: var(--spacing-4);
+    text-align: left;
+  }
+
+  .features-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product{
     grid-template-columns: 1fr;
+  }
+  .feature{
+    grid-template-columns: 1fr;
+    grid-column: auto;
   }
 
 }
