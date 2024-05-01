@@ -282,12 +282,15 @@ body {
   /*Solo mobile*/
 }
 
+ 
+
 
 .feature__image {
-   max-width: 100%;
+  width: 100%;
   height: 100%;
   margin-bottom: var(--spacing-2);
   object-fit: cover;
+  aspect-ratio: 4/3;
  
  
   /*Solo mobile*/
@@ -645,8 +648,17 @@ button[type=submit]:hover {
     border-right: 1px solid var(--color-primary);
   }
 
+
+  .feature__picture {
+    width: 50%;
+  }
+  
+  .feature__content{
+    width: 50%;
+  }
+
   .feature__image {
-    max-width: 50%;
+    width: 100%;
 
     border: 1px solid var(--color-primary);
 
