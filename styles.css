@@ -63,7 +63,6 @@ body {
 
 /* Estilos para el header y navegación */
 .header {
-  background-image: url("https://source.unsplash.com/1600x900/?technology");
   color: var(--color-text);
   text-align: left;
 }
@@ -83,8 +82,9 @@ body {
 }
 
 .nav__link {
-  color: var(--color-text-white);
+  color: var(--color-primary);
   text-decoration: none;
+  text-shadow: 0 0 30px var(--color-primary);
   font-family: "Space Grotesk", sans-serif;
   transition: all 0.3s;
 
@@ -127,6 +127,18 @@ body {
 
 }
 
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .hero__content {
   max-width: 800px;
   margin: 0 auto;
@@ -142,6 +154,7 @@ body {
   font-size: var(--font-size-4);
   margin-bottom: var(--spacing-3);
   line-height: 1;
+  text-shadow: 0 0 30px var(--color-primary);
 
   span {
     color: var(--color-accent);
@@ -154,6 +167,7 @@ body {
   font-size: var(--font-size-2);
   margin-bottom: var(--spacing-4);
   text-align: center;
+  text-shadow: 0 0 30px var(--color-primary)
 }
 
 /* Estilos para las secciones */
@@ -165,6 +179,7 @@ body {
 
 .products {
   color: var(--color-text);
+  background-color: var(--color-background);
   padding: var(--spacing-4) 0;
 }
 
@@ -404,13 +419,13 @@ body {
 
 /* Estilos para la sección de testimonios */
 .testimonials {
-  height: 60vh;
   background-position: top;
   background-image: url("img/smoke.webp");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
   background-size: cover;
   color: var(--color-text);
   padding: var(--spacing-4) 0;
-}
+  background-color: var(--color-secondary);
+  }
 
 .testimonials__title {
   font-family: "Space Grotesk", sans-serif;
