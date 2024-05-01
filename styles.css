@@ -45,6 +45,10 @@ button {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
@@ -304,6 +308,7 @@ body {
   background-color: var(--color-primary);
   color: var(--color-text-white);
   padding: var(--spacing-4) 0;
+  
 }
 
 .pricing__title {
@@ -689,6 +694,7 @@ button[type=submit]:hover {
 
     text-align: left;
     padding: var(--spacing-3);
+    box-sizing: border-box;
 
   }
 
