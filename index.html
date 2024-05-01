@@ -14,8 +14,10 @@
 	<link rel="stylesheet" href="styles.css">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-light-32x32.png" media="(prefers-color-scheme: light)">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-dark-32x32.png"
+		media="(prefers-color-scheme: dark)">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-light-32x32.png"
+		media="(prefers-color-scheme: light)">
 
 </head>
 
@@ -33,12 +35,13 @@
 			</ul>
 			<div class="nav-mobile">
 				<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-					<path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="currentColor" />
+					<path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+						fill="currentColor" />
 				</svg>
 			</div>
 		</nav>
 
-		
+
 
 
 		<!-- Hero Section -->
@@ -57,40 +60,74 @@
 			<h2 class="products__title">Nuestros Productos</h2>
 			<div class="products-grid">
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 1" class="product__image">
-					<h3 class="product__title">Producto 1</h3>
-					<p class="product__description">Descripción del producto 1 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/01-producto_identidad-visual.webp" media="(min-width: 1024px)">
+						<source srcset="/img/medium/01-producto_identidad-visual.webp" media="(min-width: 769px)">
+						<source srcset="/img/small/01-producto_identidad-visual.webp">
+						<img src="/img/medium/01-producto_identidad-visual.webp" alt="Product 1">
+					</picture>
+					<h3 class="product__title">Diseño de Identidad Visual</h3>
+					<p class="product__description">Desarrollo de logotipos, paletas de colores y elementos visuales
+						para marcas que reflejen su identidad única.</p>
 				</div>
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 2" class="product__image">
-					<h3 class="product__title">Producto 2</h3>
-					<p class="product__description">Descripción del producto 2 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/02-producto_desarrollo-web.webp" media="(min-width: 1024px)">
+						<source srcset="/img/medium/02-producto_desarrollo-web.webp" media="(min-width: 769px)">
+						<source srcset="/img/small/02-producto_desarrollo-web.webp">
+						<img src="/img/medium/02-producto_desarrollo-web.webp" alt="Product 2">
+					</picture>
+					<h3 class="product__title">Desarrollo Web Creativo</h3>
+					<p class="product__description">Creación de sitios web personalizados que combinan diseño estético
+						con funcionalidad y tecnología de última generación.</p>
 				</div>
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 3" class="product__image">
-					<h3 class="product__title">Producto 3</h3>
-					<p class="product__description">Descripción del producto 3 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/03-producto_marketing-digital.webp" media="(min-width: 1024px)">
+						<source srcset="/img/medium/03-producto_marketing-digital.webp" media="(min-width: 769px)">
+						<source srcset="/img/small/03-producto_marketing-digital.webp">
+						<img src="/img/medium/03-producto_marketing-digital.webp" alt="Product 3">
+					</picture>
+					<h3 class="product__title">Estrategias de Marketing Digital</h3>
+					<p class="product__description">Planificación y ejecución de campañas de marketing digital centradas
+						en la innovación y la creatividad para maximizar la visibilidad y el engagement.</p>
 				</div>
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 4" class="product__image">
-					<h3 class="product__title">Producto 4</h3>
-					<p class="product__description">Descripción del producto 4 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/04-producto_realidad-aumentada.webp" media="(min-width: 1024px)">
+						<source srcset="/img/medium/04-producto_realidad-aumentada.webp" media="(min-width: 769px)">
+						<source srcset="/img/small/04-producto_realidad-aumentada.webp">
+						<img src="/img/medium/04-producto_realidad-aumentada.webp" alt="Product 4">
+					</picture>
+					<h3 class="product__title">Realidad Aumentada en Arte</h3>
+					<p class="product__description">Implementación de experiencias interactivas de realidad aumentada
+						para galerías de arte y exposiciones, llevando las obras de arte a la vida.</p>
 				</div>
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 4" class="product__image">
-					<h3 class="product__title">Producto 5</h3>
-					<p class="product__description">Descripción del producto 5 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/05-producto_consultoria-tecnologica.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/05-producto_consultoria-tecnologica.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/05-producto_consultoria-tecnologica.webp">
+						<img src="/img/medium/05-producto_consultoria-tecnologica.webp" alt="Product 5">
+					</picture>
+					<h3 class="product__title">Consultoría Tecnológica</h3>
+					<p class="product__description">Asesoramiento especializado en tecnologías emergentes y tendencias
+						digitales para ayudar a las empresas a mantenerse al día y aprovechar al máximo su potencial.
+					</p>
 				</div>
 				<div class="product">
-					<img src="https://source.unsplash.com/600x400/?product" alt="Product 4" class="product__image">
-					<h3 class="product__title">Producto 6</h3>
-					<p class="product__description">Descripción del producto 6 Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit.</p>
+					<picture class="product__image">
+						<source srcset="/img/large/06-producto_curaduría-digital-arte.webp" media="(min-width: 1024px)">
+						<source srcset="/img/medium/06-producto_curaduría-digital-arte.webp" media="(min-width: 769px)">
+						<source srcset="/img/small/06-producto_curaduría-digital-arte.webp">
+						<img src="/img/medium/06-producto_curaduría-digital-arte.webp" alt="Product 6">
+					</picture>
+					<h3 class="product__title">Curaduría Digital de Arte</h3>
+					<p class="product__description">Selección y presentación experta de obras de arte en plataformas
+						digitales, ofreciendo a coleccionistas y aficionados acceso a una cuidadosa selección de obras
+						destacadas, junto con información detallada y contexto histórico.</p>
 				</div>
 			</div>
 		</div>
@@ -102,49 +139,83 @@
 			<div class="features-container">
 				<!-- Se agregaron nuevos elementos de texto y se organizo todo dentro del mismo contenedor -->
 				<div class="features__text">
-				<h2 class="features__title-small">¿Cómo lo hacemos?</h2>
-				<h2 class="features__title-big">Características Principales</h2>
+					<h2 class="features__title-small">¿Cómo lo hacemos?</h2>
+					<h2 class="features__title-big">Nuestra Estrategia</h2>
 				</div>
 				<div class="feature">
+					<picture class="feature__image">
+						<source srcset="/img/large/01-estrategia_enfoque-multidisciplinario.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/01-estrategia_enfoque-multidisciplinario.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/01-estrategia_enfoque-multidisciplinario.webp">
+						<img src="/img/medium/01-estrategia_enfoque-multidisciplinario.webp" alt="Feature 1">
+					</picture>
 
-					<img src="https://source.unsplash.com/600x400/?feature" alt="Feature 1" class="feature__image">
-
 					<div class="feature__content">
-						<h3 class="feature__title">Característica 1</h3>
-						<p class="feature__description">Descripción de la característica 1 Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.</p>
+						<h3 class="feature__title">Enfoque Multidisciplinario</h3>
+						<p class="feature__description">Integración de expertos en arte, marketing y tecnología para
+							ofrecer soluciones completas y holísticas.</p>
 					</div>
 				</div>
 				<div class="feature">
-					<img src="https://source.unsplash.com/600x400/?feature" alt="Feature 2" class="feature__image">
+					<picture class="feature__image">
+						<source srcset="/img/large/02-estrategia_investigacion-continua.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/02-estrategia_investigacion-continua.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/02-estrategia_investigacion-continua.webp">
+						<img src="/img/medium/02-estrategia_investigacion-continua.webp" alt="Feature 2">
+					</picture>
 					<div class="feature__content">
-						<h3 class="feature__title">Característica 2</h3>
-						<p class="feature__description">Descripción de la característica 2 Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.</p>
+						<h3 class="feature__title">Investigación Continua</h3>
+						<p class="feature__description">Seguimiento constante de las últimas tendencias y tecnologías
+							para garantizar que las soluciones ofrecidas estén siempre a la vanguardia.</p>
 					</div>
 				</div>
 				<div class="feature">
-					<img src="https://source.unsplash.com/600x400/?feature" alt="Feature 2" class="feature__image">
+					<picture class="feature__image">
+						<source srcset="/img/large/03-estrategia_personalizacion-proyecto.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/03-estrategia_personalizacion-proyecto.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/03-estrategia_personalizacion-proyecto.webp">
+						<img src="/img/medium/03-estrategia_personalizacion-proyecto.webp" alt="Feature 3">
+					</picture>
 					<div class="feature__content">
-						<h3 class="feature__title">Característica 3</h3>
-						<p class="feature__description">Descripción de la característica 3 Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.</p>
+						<h3 class="feature__title">Personalización</h3>
+						<p class="feature__description">Adaptación de cada proyecto a las necesidades específicas del
+							cliente, garantizando un enfoque único y personalizado.</p>
 					</div>
 				</div>
 				<div class="feature">
-					<img src="https://source.unsplash.com/600x400/?feature" alt="Feature 2" class="feature__image">
+					<picture class="feature__image">
+						<source srcset="/img/large/04-estrategia_colaboracion-creativa.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/04-estrategia_colaboracion-creativa.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/04-estrategia_colaboracion-creativa.webp">
+						<img src="/img/medium/04-estrategia_colaboracion-creativa.webp" alt="Feature 4">
+					</picture>
 					<div class="feature__content">
-						<h3 class="feature__title">Característica 4</h3>
-						<p class="feature__description">Descripción de la característica 4 Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.</p>
+						<h3 class="feature__title">Colaboración Creativa</h3>
+						<p class="feature__description">Trabajo en estrecha colaboración con los clientes para fomentar
+							la creatividad y la innovación en todas las etapas del proceso.</p>
 					</div>
 				</div>
 				<div class="feature">
-					<img src="https://source.unsplash.com/600x400/?feature" alt="Feature 2" class="feature__image">
+					<picture class="feature__image">
+						<source srcset="/img/large/04-estrategia_transparencia-comunicacion.webp"
+							media="(min-width: 1024px)">
+						<source srcset="/img/medium/04-estrategia_transparencia-comunicacion.webp"
+							media="(min-width: 769px)">
+						<source srcset="/img/small/04-estrategia_transparencia-comunicacion.webp">
+						<img src="/img/medium/04-estrategia_transparencia-comunicacion.webp" alt="Feature 5">
+					</picture>
 					<div class="feature__content">
-						<h3 class="feature__title">Característica 5</h3>
-						<p class="feature__description">Descripción de la característica 5 Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.</p>
+						<h3 class="feature__title">Transparencia y Comunicación</h3>
+						<p class="feature__description">Comunicación abierta y transparente con los clientes en cada
+							etapa del proyecto para garantizar la satisfacción y la comprensión mutua.</p>
 					</div>
 				</div>
 			</div>
@@ -157,24 +228,22 @@
 			<h2 class="pricing__title">Planes de Precio</h2>
 			<div class="price-cards">
 				<div class="price-card" onclick="window.location.href='#'">
-					<h3 class="price-card__title">Plan Básico</h3>
-					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-						placerat eros et neque fermentum, a tempor libero consequat.</p>
-					<p class="price">$19.99/mes</p>
+					<h3 class="price-card__title">Plan Básico - Arte Digital</h3>
+					<p class="price-card__description">Con nuestro Plan Básico, obtén un logo único que represente tu marca, un sitio web básico de hasta tres páginas para exhibir tu arte y una consulta sobre tecnologías emergentes para mantenerte al día.</p>
+					<p class="price">$49.99/mes</p>
 					<a href="#" class="cta-button">Seleccionar</a>
 				</div>
 				<div class="price-card" onclick="window.location.href='#'">
-					<h3 class="price-card__title">Plan Estándar</h3>
-					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-						placerat eros et neque fermentum, a tempor libero consequat.</p>
-					<p class="price">$39.99/mes</p>
+					<h3 class="price-card__title">Plan Avanzado - Marketing Creativo:
+					</h3>
+					<p class="price-card__description">Eleva tu estrategia de marketing con una Estrategia de Marketing Digital personalizada, un sitio web avanzado de hasta diez páginas y una campaña en redes sociales para impulsar tu presencia en línea.</p>
+					<p class="price">$99.99/mes</p>
 					<a href="#" class="cta-button">Seleccionar</a>
 				</div>
 				<div class="price-card" onclick="window.location.href='#'">
-					<h3 class="price-card__title">Plan Premium</h3>
-					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-						placerat eros et neque fermentum, a tempor libero consequat.</p>
-					<p class="price">$59.99/mes</p>
+					<h3 class="price-card__title">Plan Premium - Innovación Total</h3>
+					<p class="price-card__description">Experimenta la innovación con una Consultoría Tecnológica personalizada, Realidad Aumentada en Arte para hasta cinco obras y una campaña completa de marketing digital con análisis detallados de resultados.</p>
+					<p class="price">$199.99/mes</p>
 					<a href="#" class="cta-button">Seleccionar</a>
 				</div>
 			</div>
@@ -204,8 +273,7 @@
 					<div class="testimonial" id="testimonial-3">
 						<img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Person 3"
 							class="testimonial__image">
-						<p class="testimonial__text">"¡La mejor inversión que he hecho para mi negocio! Servicio de
-							primera clase."</p>
+						<p class="testimonial__text">"¡Equipo excepcional! Su creatividad y atención al detalle son incomparables. ¡Gracias por superar nuestras expectativas!"</p>
 						<p class="testimonial__author">Mike Johnson</p>
 					</div>
 				</div>
