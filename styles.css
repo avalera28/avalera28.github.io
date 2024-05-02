@@ -762,6 +762,8 @@ button[type=submit]:hover {
 
   }
 
+  .features__text{margin-left:95px; } /* para asegurar que el svg no interfiera con el texto */
+
   .features__title-big {
     margin-right: var(--spacing-4);
     text-align: left;
@@ -886,7 +888,6 @@ button[type=submit]:hover {
   100% {
     transform: translateY(-50%) rotate(360deg) scale(1);
 }
-     /*  0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); } */
+    
   }
 }
