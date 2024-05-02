@@ -65,6 +65,7 @@ body {
 .header {
   color: var(--color-text);
   text-align: left;
+  margin-bottom: var(--spacing-4);
 }
 
 .nav {
@@ -124,7 +125,6 @@ body {
   justify-content: center;
   text-align: center;
   color: var(--color-text-white);
-
 }
 
 .background-video {
@@ -161,13 +161,72 @@ body {
   }
 }
 
+.hero__title {
+  animation: hero_variable 4000ms infinite both;
+}
+
+@keyframes hero_variable {
+	0% {
+		font-variation-settings: 'wght' 100, 'wdth' 85;
+		
+	}
+	60% {
+		font-variation-settings: 'wght' 700, 'wdth' 100;
+		
+	}
+	
+	100% {
+		font-variation-settings: 'wght' 100, 'wdth' 85;
+		
+	}
+}
+
 /* 💡Siguiente versión, agregar alguna animación tipografica */
 
+.hero__subtitle-container{
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  align-items: center;
+  justify-content: center;
+
+  span{color: var(--color-accent); text-transform: uppercase;}
+}
+
 .hero__subtitle {
-  font-size: var(--font-size-2);
-  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-3);
+  
   text-align: center;
   text-shadow: 0 0 30px var(--color-primary)
+}
+
+.hero__moto{
+  background-color: var(--color-accent);
+  height: var(--font-size-3);
+  font-size: var(--font-size-3);
+  overflow: hidden;
+  
+  padding: 10px;
+  margin-bottom: var(--spacing-1);
+  display:inline-block;
+}
+
+
+.hero__moto div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+  0% {margin-top: -10%;}
+  10% {margin-top: -10%;}
+  20% {margin-top: -45%;}
+  30% {margin-top: -45%;}
+  40% {margin-top: -85%}
+  60% {margin-top: -85%}
+  70% {margin-top: -45%;}
+  80% {margin-top: -45%;}
+  90% {margin-top: -10%;}
+  100% {margin-top: -10%;}
 }
 
 /* Estilos para las secciones */
@@ -207,17 +266,25 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid var(--color-primary);
   border-right: 1px solid var(--color-primary);
+  color: var(--color-primary);
 
+  animation: card_animation ease-in-out;
+	animation-timeline: view();
 }
 
-.product:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text-white);
 
-  .product__description {
+@keyframes card_animation {
+	50% {
+		background-color: var(--color-accent);
     color: var(--color-text-white);
+	}
+  100% {
+    background-color: var(--color-background);
+    color: var(--color-primary);
   }
 }
+
+
 
 .product__picture{
   
@@ -243,7 +310,6 @@ body {
 
 .product__description {
   font-size: var(--font-size-1);
-  color: var(--color-text-light);
   text-align: center;
 }
 
@@ -269,7 +335,6 @@ body {
 
 .features__title-small {
   display: none;
-  /* ❓Los estilos de la fuente, ¿aquí o en la media query? */
 
 }
 
@@ -295,10 +360,22 @@ body {
   /*solo mobile*/
   border: 1px solid var(--color-primary);
   /*Solo mobile*/
+  animation: image_animation ease-in-out;
+	animation-timeline: view();
+  animation-range: cover;
+  opacity: 0;
 }
 
- 
-
+@keyframes image_animation {
+  50% {
+    scale: 1.1;
+    opacity: 1;
+  }
+  100% {
+    scale: 1;
+    opacity: 0;
+  }
+}
 
 .feature__image {
   width: 100%;
@@ -312,7 +389,11 @@ body {
   border-bottom: 1px solid var(--color-primary);
   /*Solo mobile*/
   box-sizing: border-box;
+
+  
 }
+
+
 
 .feature__title {
   font-family: "Space Grotesk", sans-serif;
@@ -330,6 +411,13 @@ body {
   color: var(--color-text-light);
   padding: var(--spacing-3);
 }
+
+.animated-svg {
+ display: none;
+ 
+  
+}
+
 
 /* Estilos para la sección de precios */
 .pricing {
@@ -422,9 +510,9 @@ body {
   background-position: top;
   background-image: url("img/smoke.webp");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
   background-size: cover;
-  color: var(--color-text);
+  color: var(--color-text-white);
   padding: var(--spacing-4) 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   }
 
 .testimonials__title {
@@ -451,7 +539,7 @@ body {
 }
 
 .testimonial {
-  background-color: #f2f2f278;
+  background-color:#f2f2f224;
   padding: var(--spacing-3);
   text-align: center;
   margin-right: var(--spacing-3);
@@ -479,7 +567,7 @@ body {
 
 .testimonial__author {
   font-size: var(--font-size-1);
-  color: var(--color-text-light);
+  color: var(--color-text-white);
 }
 
 /* Estilos para la sección de contacto */
@@ -503,7 +591,7 @@ body {
 
 .contact__description {
   font-size: var(--font-size-2);
-  color: var(--color-accent);
+  color: var(--color-text-white); /* se cambio el color para un mejor contraste en accesibilidad */
   margin-bottom: var(--spacing-4);
   text-align: center;
 }
@@ -571,6 +659,8 @@ button[type=submit]:hover {
 
 
 
+
+
 /* Media Queries */
 @media (min-width: 769px) {
   .container {
@@ -586,9 +676,11 @@ button[type=submit]:hover {
     font-size: var(--font-size-5);
   }
 
-  .hero__subtitle {
-    font-size: var(--font-size-3);
+  .hero__subtitle-container{
+    
+    flex-direction: row;
   }
+
 
   .features__title-small {
     display: block;
@@ -611,8 +703,11 @@ button[type=submit]:hover {
   .feature{
     grid-template-columns: 1fr;
     grid-column: auto;
+    animation:none;
+    opacity: 1;
   }
 
+ 
 }
 
 @media (min-width: 1024px) {
@@ -643,7 +738,17 @@ button[type=submit]:hover {
     grid-column: 2;
     flex-direction: row;
     border: none;
+  }
 
+  .product{
+    animation: none;
+	  animation-timeline: none;
+  }
+  
+
+  .product:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-white);
   }
 
   .products__title {
@@ -700,9 +805,14 @@ button[type=submit]:hover {
 
   .feature__title {
     font-size: var(--font-size-3);
+    transition: color 0.2s, font-weight 0.2s, transform 0.2s;
   }
 
-
+.feature:hover .feature__title {
+  transform: translateY(-5px);
+    color:var(--color-accent); 
+    font-weight: bold;
+}
 
   .pricing__title {
     text-align: left;
@@ -753,7 +863,30 @@ button[type=submit]:hover {
 
   }
 
+  .animated-svg {
+    display: block;
+    position: sticky;
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    animation: rotate 2.5s infinite linear;
+    
+  }
 
+ 
+  @keyframes rotate {
 
+    0% {
+      transform: translateY(-50%) rotate(0deg) scale(1);
+  }
+  50% {
+      transform: translateY(-50%) rotate(180deg) scale(1.5);
+  }
 
+  100% {
+    transform: translateY(-50%) rotate(360deg) scale(1);
+}
+     /*  0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); } */
+  }
 }
