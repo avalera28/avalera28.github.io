@@ -150,7 +150,6 @@ body {
   font-style: normal;
   text-align: center;
   margin-top: var(--font-size-4);
-  /* 💡Siguiente versión,usar clamp para optimizar fuentes */
   font-size: var(--font-size-4);
   margin-bottom: var(--spacing-3);
   line-height: 1;
@@ -166,49 +165,51 @@ body {
 }
 
 @keyframes hero_variable {
-	0% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		
-	}
-	60% {
-		font-variation-settings: 'wght' 700, 'wdth' 100;
-		
-	}
-	
-	100% {
-		font-variation-settings: 'wght' 100, 'wdth' 85;
-		
-	}
+  0% {
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+
+  }
+
+  60% {
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+
+  }
+
+  100% {
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+
+  }
 }
 
-/* 💡Siguiente versión, agregar alguna animación tipografica */
-
-.hero__subtitle-container{
+.hero__subtitle-container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-1);
   align-items: center;
   justify-content: center;
 
-  span{color: var(--color-accent); text-transform: uppercase;}
+  span {
+    color: var(--color-accent);
+    text-transform: uppercase;
+  }
 }
 
 .hero__subtitle {
   font-size: var(--font-size-3);
-  
+
   text-align: center;
   text-shadow: 0 0 30px var(--color-primary)
 }
 
-.hero__moto{
+.hero__moto {
   background-color: var(--color-accent);
   height: var(--font-size-3);
   font-size: var(--font-size-3);
   overflow: hidden;
-  
+
   padding: 10px;
   margin-bottom: var(--spacing-1);
-  display:inline-block;
+  display: inline-block;
 }
 
 
@@ -217,19 +218,49 @@ body {
 }
 
 @keyframes text-animation {
-  0% {margin-top: -10%;}
-  10% {margin-top: -10%;}
-  20% {margin-top: -45%;}
-  30% {margin-top: -45%;}
-  40% {margin-top: -85%}
-  60% {margin-top: -85%}
-  70% {margin-top: -45%;}
-  80% {margin-top: -45%;}
-  90% {margin-top: -10%;}
-  100% {margin-top: -10%;}
+  0% {
+    margin-top: -10%;
+  }
+
+  10% {
+    margin-top: -10%;
+  }
+
+  20% {
+    margin-top: -45%;
+  }
+
+  30% {
+    margin-top: -45%;
+  }
+
+  40% {
+    margin-top: -85%
+  }
+
+  60% {
+    margin-top: -85%
+  }
+
+  70% {
+    margin-top: -45%;
+  }
+
+  80% {
+    margin-top: -45%;
+  }
+
+  90% {
+    margin-top: -10%;
+  }
+
+  100% {
+    margin-top: -10%;
+  }
 }
 
 /* Estilos para las secciones */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -269,30 +300,29 @@ body {
   color: var(--color-primary);
 
   animation: card_animation ease-in-out;
-	animation-timeline: view();
+  animation-timeline: view();
 }
 
 
 @keyframes card_animation {
-	50% {
-		background-color: var(--color-accent);
+  50% {
+    background-color: var(--color-accent);
     color: var(--color-text-white);
-	}
+  }
+
   100% {
     background-color: var(--color-background);
     color: var(--color-primary);
   }
 }
 
+.product__picture {
 
-
-.product__picture{
-  
   width: 100px;
   height: 100px;
 }
 
-.product__image {   
+.product__image {
   max-width: 100%;
   object-fit: cover;
   aspect-ratio: 4/3;
@@ -305,7 +335,6 @@ body {
   font-size: var(--font-size-2);
   text-align: center;
   margin-bottom: var(--spacing-1);
-  /* 💡Siguiente versión,usar clamp para optimizar fuentes */
 }
 
 .product__description {
@@ -361,7 +390,7 @@ body {
   border: 1px solid var(--color-primary);
   /*Solo mobile*/
   animation: image_animation ease-in-out;
-	animation-timeline: view();
+  animation-timeline: view();
   animation-range: cover;
   opacity: 0;
 }
@@ -371,6 +400,7 @@ body {
     scale: 1.1;
     opacity: 1;
   }
+
   100% {
     scale: 1;
     opacity: 0;
@@ -383,14 +413,14 @@ body {
   margin-bottom: var(--spacing-2);
   object-fit: cover;
   aspect-ratio: 4/3;
- 
- 
+
+
   /*Solo mobile*/
   border-bottom: 1px solid var(--color-primary);
   /*Solo mobile*/
   box-sizing: border-box;
 
-  
+
 }
 
 
@@ -413,9 +443,9 @@ body {
 }
 
 .animated-svg {
- display: none;
- 
-  
+  display: none;
+
+
 }
 
 
@@ -424,7 +454,7 @@ body {
   background-color: var(--color-primary);
   color: var(--color-text-white);
   padding: var(--spacing-4) 0;
-  
+
 }
 
 .pricing__title {
@@ -432,7 +462,6 @@ body {
   font-weight: 500;
   font-style: normal;
   text-align: center;
-   /* 💡Siguiente versión, considerar crear clases para titulos y asi evitar reescribir los estilos tipograficos en cada sección*/
   text-transform: uppercase;
   font-size: clamp(var(--font-size-3), 2.5vw, var(--font-size-5));
 
@@ -508,12 +537,12 @@ body {
 /* Estilos para la sección de testimonios */
 .testimonials {
   background-position: top;
-  background-image: url("img/smoke.webp");  /* 💡Siguiente versión,usar un svg y animar para darle más vida a la sección */
+  background-image: url("img/smoke.webp");
   background-size: cover;
   color: var(--color-text-white);
   padding: var(--spacing-4) 0;
   background-color: var(--color-primary);
-  }
+}
 
 .testimonials__title {
   font-family: "Space Grotesk", sans-serif;
@@ -539,7 +568,7 @@ body {
 }
 
 .testimonial {
-  background-color:#f2f2f224;
+  background-color: #f2f2f224;
   padding: var(--spacing-3);
   text-align: center;
   margin-right: var(--spacing-3);
@@ -591,7 +620,8 @@ body {
 
 .contact__description {
   font-size: var(--font-size-2);
-  color: var(--color-text-white); /* se cambio el color para un mejor contraste en accesibilidad */
+  color: var(--color-text-white);
+  /* se cambio el color para un mejor contraste en accesibilidad */
   margin-bottom: var(--spacing-4);
   text-align: center;
 }
@@ -676,8 +706,8 @@ button[type=submit]:hover {
     font-size: var(--font-size-5);
   }
 
-  .hero__subtitle-container{
-    
+  .hero__subtitle-container {
+
     flex-direction: row;
   }
 
@@ -693,21 +723,22 @@ button[type=submit]:hover {
     text-align: left;
   }
 
-  .features-container{
+  .features-container {
     grid-template-columns: 1fr 1fr;
   }
 
-  .product{
+  .product {
     grid-template-columns: 1fr;
   }
-  .feature{
+
+  .feature {
     grid-template-columns: 1fr;
     grid-column: auto;
-    animation:none;
+    animation: none;
     opacity: 1;
   }
 
- 
+
 }
 
 @media (min-width: 1024px) {
@@ -740,11 +771,11 @@ button[type=submit]:hover {
     border: none;
   }
 
-  .product{
+  .product {
     animation: none;
-	  animation-timeline: none;
+    animation-timeline: none;
   }
-  
+
 
   .product:hover {
     background-color: var(--color-accent);
@@ -762,7 +793,11 @@ button[type=submit]:hover {
 
   }
 
-  .features__text{margin-left:95px; } /* para asegurar que el svg no interfiera con el texto */
+  .features__text {
+    margin-left: 95px; /* para asegurar que el svg no interfiera con el texto */
+  }
+ 
+  /* la animación y los estilos del svg estan en la linea 903 */
 
   .features__title-big {
     margin-right: var(--spacing-4);
@@ -792,8 +827,8 @@ button[type=submit]:hover {
   .feature__picture {
     width: 50%;
   }
-  
-  .feature__content{
+
+  .feature__content {
     width: 50%;
   }
 
@@ -810,11 +845,11 @@ button[type=submit]:hover {
     transition: color 0.2s, font-weight 0.2s, transform 0.2s;
   }
 
-.feature:hover .feature__title {
-  transform: translateY(-5px);
-    color:var(--color-accent); 
+  .feature:hover .feature__title {
+    transform: translateY(-5px);
+    color: var(--color-accent);
     font-weight: bold;
-}
+  }
 
   .pricing__title {
     text-align: left;
@@ -865,29 +900,31 @@ button[type=submit]:hover {
 
   }
 
+  /* Animación del svg en la section features*/
   .animated-svg {
     display: block;
     position: sticky;
-    left: 20px; 
-    top: 50%; 
+    left: 20px;
+    top: 50%;
     transform: translateY(-50%);
     animation: rotate 2.5s infinite linear;
-    
+
   }
 
- 
+
   @keyframes rotate {
 
     0% {
       transform: translateY(-50%) rotate(0deg) scale(1);
-  }
-  50% {
-      transform: translateY(-50%) rotate(180deg) scale(1.5);
-  }
+    }
 
-  100% {
-    transform: translateY(-50%) rotate(360deg) scale(1);
-}
-    
+    50% {
+      transform: translateY(-50%) rotate(180deg) scale(1.5);
+    }
+
+    100% {
+      transform: translateY(-50%) rotate(360deg) scale(1);
+    }
+
   }
 }
